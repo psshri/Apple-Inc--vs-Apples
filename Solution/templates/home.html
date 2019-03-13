@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			NLP Web Application
+		</div>
+		<h2>Apple Fruit or Apple Inc.</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Query Here</p>
+		
+		<textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+		<button style="margin-left: 50vw; padding: 15px;" onclick="location.href = '/database';" id="myButton" class="float-left submit-button" >Database</button>
+
+	</div>
+
+	
+	
+
+</body>
+</html>
